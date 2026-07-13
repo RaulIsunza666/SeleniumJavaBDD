@@ -1,0 +1,34 @@
+package pages;
+
+import base.BasePage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class InventoryPage extends BasePage {
+
+    private final By lblTitle = By.className("title");
+    private final By btnAddBackpack = By.id("add-to-cart-sauce-labs-backpack");
+    private final By btnAddBikeLight = By.id("add-to-cart-sauce-labs-bike-light");
+    private final By shoppingCart = By.className("shopping_cart_link");
+
+    public InventoryPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public void addBackpackToCart(){
+        click(btnAddBackpack);
+    }
+
+    public void addBikeLightToCart(){
+        click(btnAddBikeLight);
+    }
+
+    public CartPage openCart(){
+        click(shoppingCart);
+        return new CartPage(driver);
+    }
+
+    public String getPageTitle() {
+        return getElementText(lblTitle);
+    }
+}
