@@ -14,7 +14,7 @@ public class CartPage extends BasePage {
     }
 
     public boolean isBackpackDisplayed() {
-        return isElementDisplayed(backpackName, "Validando elemento renderizado");
+        return isElementDisplayed(backpackName);
     }
 
     public CheckoutPage goToCheckout() {

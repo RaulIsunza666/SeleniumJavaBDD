@@ -35,8 +35,8 @@ public class BasePage {
         return find(locator).getText();
     }
 
-    protected boolean isElementDisplayed(By locator, String elementName) {
-        logger.info("Validando elemento mostrado: {}", elementName);
+    protected boolean isElementDisplayed(By locator) {
+        logger.info("Validando elemento mostrado:");
         return find(locator).isDisplayed();
     }
 
