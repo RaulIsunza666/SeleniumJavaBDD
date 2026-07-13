@@ -16,19 +16,19 @@ public class LoginPage extends BasePage {
     }
 
     public InventoryPage login(String usuario, String password) {
-        enterText(txtUsername, usuario);
-        enterText(txtPassword, password);
-        click(btnLogin);
+        enterText(txtUsername, usuario, "Campo \"User\"");
+        enterText(txtPassword, password, "Campo \"Password\"");
+        click(btnLogin, "Botón login");
         return new InventoryPage(driver);
     }
 
     public void invalidLogin(String usuario, String password){
-        enterText(txtUsername, usuario);
-        enterText(txtPassword, password);
-        click(btnLogin);
+        enterText(txtUsername, usuario, "Ingresando credenciales de usuario:");
+        enterText(txtPassword, password, "Ingresando Contraseña");
+        click(btnLogin,"Botón login");
     }
 
     public String getErrorMessage() {
-        return getElementText(txtErrorMessage);
+        return getElementText(txtErrorMessage, "Mostrando mensaje de error esprado");
     }
 }

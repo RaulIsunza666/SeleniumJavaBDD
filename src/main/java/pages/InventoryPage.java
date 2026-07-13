@@ -16,19 +16,19 @@ public class InventoryPage extends BasePage {
     }
 
     public void addBackpackToCart(){
-        click(btnAddBackpack);
+        click(btnAddBackpack, "Botón agregar producto");
     }
 
     public void addBikeLightToCart(){
-        click(btnAddBikeLight);
+        click(btnAddBikeLight, "Botón agregar producto");
     }
 
     public CartPage openCart(){
-        click(shoppingCart);
+        click(shoppingCart, "Botón carrito de compras");
         return new CartPage(driver);
     }
 
     public String getPageTitle() {
-        return getElementText(lblTitle);
+        return getElementText(lblTitle, "Mostrando título de la página");
     }
 }

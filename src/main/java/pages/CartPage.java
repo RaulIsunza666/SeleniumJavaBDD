@@ -14,11 +14,11 @@ public class CartPage extends BasePage {
     }
 
     public boolean isBackpackDisplayed() {
-        return isElementDisplayed(backpackName);
+        return isElementDisplayed(backpackName, "Validando elemento renderizado");
     }
 
     public CheckoutPage goToCheckout() {
-        click(btnCheckout);
+        click(btnCheckout,"Botón checkout");
         return new CheckoutPage(driver);
     }
 }

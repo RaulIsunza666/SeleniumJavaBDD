@@ -12,6 +12,6 @@ public class CheckoutCompletePage extends BasePage {
     }
 
     public String getConfirmationMessage() {
-        return getElementText(lblCompleteHeader);
+        return getElementText(lblCompleteHeader, "Mostrando mensaje de confirmación");
     }
 }

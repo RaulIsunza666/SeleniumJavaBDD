@@ -13,7 +13,7 @@ public class CheckoutOverviewPage extends BasePage {
     }
 
     public CheckoutCompletePage finishPurchase() {
-        click(btnFinish);
+        click(btnFinish, "Botón terminar compra");
         return new CheckoutCompletePage(driver);
     }
 }

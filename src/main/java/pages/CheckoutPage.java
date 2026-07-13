@@ -15,10 +15,10 @@ public class CheckoutPage extends BasePage {
     }
 
     public CheckoutOverviewPage fillCustomerInformation(String firstName, String lastName, String postalCode) {
-        enterText(txtFirstName, firstName);
-        enterText(txtLastName, lastName);
-        enterText(txtPostalCode, postalCode);
-        click(btnContinue);
+        enterText(txtFirstName, firstName, "Ingresando nombre: ".concat(firstName));
+        enterText(txtLastName, lastName, "Ingresando apellido: ".concat(lastName));
+        enterText(txtPostalCode, postalCode, "Ingresando C.P.: ".concat(postalCode));
+        click(btnContinue, "Botón CheckoutOverview");
         return new CheckoutOverviewPage(driver);
     }
 }
