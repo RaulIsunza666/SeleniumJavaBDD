@@ -3,6 +3,7 @@ package pages;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.AllureManager;
 
 public class LoginPage extends BasePage {
 
@@ -16,8 +17,11 @@ public class LoginPage extends BasePage {
     }
 
     public InventoryPage login(String usuario, String password) {
+        AllureManager.step("Ingresar usuario");
         enterText(txtUsername, usuario, "Campo \"User\"");
+        AllureManager.step("Ingresar contraseña");
         enterText(txtPassword, password, "Campo \"Password\"");
+        AllureManager.step("Presionar Botón Login");
         click(btnLogin, "Botón login");
         return new InventoryPage(driver);
     }

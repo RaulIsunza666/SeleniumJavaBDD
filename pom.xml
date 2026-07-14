@@ -20,6 +20,7 @@
         <webdrivermanager.version>6.3.0</webdrivermanager.version>
         <slf4j.version>2.0.17</slf4j.version>
         <logbock.version>1.5.18</logbock.version>
+        <surefire.version>3.5.3</surefire.version>
     </properties>
 
     <dependencies>
@@ -47,5 +48,28 @@
             <artifactId>logback-classic</artifactId>
             <version>${logbock.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <allure.results.directory>
+                            target/allure-results
+                        </allure.results.directory>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

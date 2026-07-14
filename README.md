@@ -16,6 +16,18 @@ Automation framework developed with:
 - Base Test
 - Configuration Reader
 
+## Test Execution
+
+```bash
+mvn clean test
+```
+
+## Open Test Report
+
+```bash
+allure serve target/allure-results
+```
+
 ## Status
 
 🚧 In Progress

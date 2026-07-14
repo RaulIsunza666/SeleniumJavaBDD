@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
@@ -18,6 +19,10 @@ public class SeleniumBDDTests extends BaseTest {
         inventoryPage.openCart();
     }
 
+    @Epic("Authentication")
+    @Feature("Login")
+    @Story("Invalid Login")
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     public void invalidLoginShouldDisplayError() {
         LoginPage loginPage = new LoginPage(driver);
