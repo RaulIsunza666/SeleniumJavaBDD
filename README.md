@@ -7,6 +7,7 @@ Automation framework developed with:
 - Selenium 4
 - TestNG
 - Selenium Manager
+- Allure
 
 ## Architecture
 
