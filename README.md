@@ -8,7 +8,8 @@ Automation framework developed with:
 - TestNG
 - Selenium Manager
 - Allure
-
+- Cucumber
+  
 ## Architecture
 
 - TestNG
@@ -17,7 +18,6 @@ Automation framework developed with:
 - Page Object Model
 - Logs
 - Allure
-- Cucumber
 - Hooks
 - HTML report for both scenarios (TestNG/Cucumber)
 
