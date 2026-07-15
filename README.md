@@ -10,11 +10,15 @@ Automation framework developed with:
 
 ## Architecture
 
+- TestNG
+- Selenium
+- DriverFactory with ThreadLocal
 - Page Object Model
-- Driver Factory
-- Base Page
-- Base Test
-- Configuration Reader
+- Logs
+- Allure
+- Cucumber
+- Hooks
+- HTML report for both scenarios (TestNG/Cucumber)
 
 ## Test Execution
 

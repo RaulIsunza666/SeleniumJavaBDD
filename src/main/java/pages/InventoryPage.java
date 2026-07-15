@@ -2,7 +2,6 @@ package pages;
 
 import base.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class InventoryPage extends BasePage {
 
@@ -10,10 +9,6 @@ public class InventoryPage extends BasePage {
     private final By btnAddBackpack = By.id("add-to-cart-sauce-labs-backpack");
     private final By btnAddBikeLight = By.id("add-to-cart-sauce-labs-bike-light");
     private final By shoppingCart = By.className("shopping_cart_link");
-
-    public InventoryPage(WebDriver driver) {
-        super(driver);
-    }
 
     public void addBackpackToCart(){
         click(btnAddBackpack, "Botón agregar producto");
@@ -25,7 +20,7 @@ public class InventoryPage extends BasePage {
 
     public CartPage openCart(){
         click(shoppingCart, "Botón carrito de compras");
-        return new CartPage(driver);
+        return new CartPage();
     }
 
     public String getPageTitle() {
